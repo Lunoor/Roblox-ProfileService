@@ -44,3 +44,11 @@ Verify Data: When you leave and rejoin, your cash should stay the same.
 Expansion: To add more items, just go back to Step 2 and update the table.
 
 Check the Output window for any configuration errors.
+
+## ## 🏷️ Trademarks & Brand Protection
+The following are registered marks of the **Lunor Development Group**:
+*   **Lunor™** (Brand Name)
+*   **Lunor Hub™** (UI Framework)
+*   **LPL™** (Lunor Product License)
+
+Unauthorized use of these names, or the creation of "copycat" frameworks using the **Lunor** prefix, is a violation of our brand guidelines. All visual assets, logos, and branding elements are proprietary.
