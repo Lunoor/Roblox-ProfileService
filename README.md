@@ -1,63 +1,46 @@
 # Roblox-ProfileService
 
-🛠️ Installation Guide
-1. Setup ReplicatedStorage
-In your Roblox Studio Explorer, navigate to ReplicatedStorage and create the following structure:
+## 1. Setup ReplicatedStorage
+Navigate to ReplicatedStorage and create these three objects. This acts as the "bridge" between your players and the server.
 
-📡 RemoteEvent: Name it ShopRemote
+📡 RemoteEvent → Name it ShopRemote
 
-📡 RemoteFunction: Name it ShopFunction
+📡 RemoteFunction → Name it ShopFunction
 
-📦 ModuleScript: Name it ShopModule
+📦 ModuleScript → Name it ShopModule
 
-Action: Paste the STEP 1 code into this module.
+Action: Paste your STEP 1 code here.
 
-Plaintext
-📂 ReplicatedStorage
- ├── 📡 ShopRemote
- ├── 📡 ShopFunction
- └── 📦 ShopModule
-2. Configure the Server
-Navigate to ServerScriptService to handle the backend logic and data saving.
+## 2. Add the Shop Configuration
+The ShopModule is the heart of your system. This is where you will manage prices and item names.
 
-🖥️ Script: Name it ShopServer
+File Location: ReplicatedStorage > ShopModule
 
-Action: Paste the STEP 2 code here.
+Note: Whenever you want to add new items, you only need to edit the ITEMS table inside this script.
 
-Note: Ensure this is a regular Script, not a LocalScript.
+## 3. Configure the Server Logic
+This script handles the money, saves the data to the cloud, and checks if a player has enough cash to buy an item.
 
-3. Setup the Client
-Navigate to StarterPlayerScripts to handle the UI and player interaction.
+File Location: ServerScriptService > ShopServer (Create a Script)
 
-👤 LocalScript: Name it ShopClient
+💾 Data Saving: Saves every 60 seconds.
 
-Action: Paste the STEP 3 code here.
+🛡️ Security: Prevents players from giving themselves items without paying.
 
-🚀 Features
-🛒 Interactive UI: Automatically generates a "SHOP" button (Bottom-Left).
+## 4. Setup the Client UI
+This script creates the buttons on the player's screen and talks to the server when they click "Buy."
 
-💰 Currency System: Includes a custom cash badge (Top-Right).
+File Location: StarterPlayer > StarterPlayerScripts > ShopClient (Create a LocalScript)
 
-💾 Auto-Save: Data saves automatically every 60 seconds and upon player departure using DataStoreService.
+🛒 Shop Button: Automatically appears at the bottom-left.
 
-🛡️ Secure: Client-Server validation via RemoteFunctions to prevent exploiters from "free-buying."
+💰 Cash Badge: Displays your current balance at the top-right.
 
-⚙️ Customization
-To add or modify items in your shop, open the ShopModule in ReplicatedStorage and edit the ITEMS table:
+## ✅ Final Checklist
+Press Play: Check the bottom-left of your screen for the Shop button.
 
-Lua
--- Example Item Entry
-[1] = {
-    Name = "Speed Coil",
-    Price = 500,
-    Description = "Go fast!",
-    AssetID = 0000000 -- Replace with your mesh/decal ID
-},
-✅ Testing
-Press F5 or click Play.
+Verify Data: When you leave and rejoin, your cash should stay the same.
 
-Verify the 🛒 SHOP button appears.
-
-Verify the 💰 Cash display updates correctly.
+Expansion: To add more items, just go back to Step 2 and update the table.
 
 Check the Output window for any configuration errors.
