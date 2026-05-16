@@ -1,27 +1,63 @@
 # Roblox-ProfileService
 
-ReplicatedStorage — create 2 things
-📡 RemoteEvent → name it ShopRemote
-📡 RemoteFunction → name it ShopFunction
-Right-click ReplicatedStorage → Insert Object → search "Remote"
-2
-ReplicatedStorage — add the module
-📦 ReplicatedStorage
-  ├─ ShopRemote
-  ├─ ShopFunction
-  └─ ShopModule  ← paste STEP1 file here (ModuleScript)
-Insert Object → ModuleScript, rename it ShopModule, paste the STEP1 code in
-3
-ServerScriptService — add the server script
-🖥️ ServerScriptService
-  └─ ShopServer  ← paste STEP2 file here (Script)
-Insert Object → Script (not LocalScript!), rename ShopServer, paste STEP2 code in
-4
-StarterPlayerScripts — add the client script
-👤 StarterPlayer
-  └─ StarterPlayerScripts
-      └─ ShopClient  ← paste STEP3 file here (LocalScript)
-Insert Object → LocalScript, rename ShopClient, paste STEP3 code in
-✅  Press Play — you should see a 🛒 SHOP button bottom-left and 💰 cash badge top-right
-✅  Data saves when you leave + every 60 seconds automatically
-✅  To add items, edit the ITEMS table in STEP1 (ShopModule)
+🛠️ Installation Guide
+1. Setup ReplicatedStorage
+In your Roblox Studio Explorer, navigate to ReplicatedStorage and create the following structure:
+
+📡 RemoteEvent: Name it ShopRemote
+
+📡 RemoteFunction: Name it ShopFunction
+
+📦 ModuleScript: Name it ShopModule
+
+Action: Paste the STEP 1 code into this module.
+
+Plaintext
+📂 ReplicatedStorage
+ ├── 📡 ShopRemote
+ ├── 📡 ShopFunction
+ └── 📦 ShopModule
+2. Configure the Server
+Navigate to ServerScriptService to handle the backend logic and data saving.
+
+🖥️ Script: Name it ShopServer
+
+Action: Paste the STEP 2 code here.
+
+Note: Ensure this is a regular Script, not a LocalScript.
+
+3. Setup the Client
+Navigate to StarterPlayerScripts to handle the UI and player interaction.
+
+👤 LocalScript: Name it ShopClient
+
+Action: Paste the STEP 3 code here.
+
+🚀 Features
+🛒 Interactive UI: Automatically generates a "SHOP" button (Bottom-Left).
+
+💰 Currency System: Includes a custom cash badge (Top-Right).
+
+💾 Auto-Save: Data saves automatically every 60 seconds and upon player departure using DataStoreService.
+
+🛡️ Secure: Client-Server validation via RemoteFunctions to prevent exploiters from "free-buying."
+
+⚙️ Customization
+To add or modify items in your shop, open the ShopModule in ReplicatedStorage and edit the ITEMS table:
+
+Lua
+-- Example Item Entry
+[1] = {
+    Name = "Speed Coil",
+    Price = 500,
+    Description = "Go fast!",
+    AssetID = 0000000 -- Replace with your mesh/decal ID
+},
+✅ Testing
+Press F5 or click Play.
+
+Verify the 🛒 SHOP button appears.
+
+Verify the 💰 Cash display updates correctly.
+
+Check the Output window for any configuration errors.
