@@ -1,5 +1,14 @@
 # Roblox-ProfileService
+# ## ⛔ PROPRIETARY SOURCE CODE - DO NOT CLONE
+**This repository is protected under the Lunor Product License (LPL).**
 
+*   **NO FORKING:** Unauthorized forks will be reported.
+*   **NO RE-UPLOADING:** This code is digitally watermarked.
+*   **NO COMMERCIAL USE:** You cannot sell any part of this script.
+
+**IF YOU ARE NOT THE INTENDED USER:** You are ordered to exit this repository 
+and delete any cached copies of the source code immediately. 
+Copyright © 2026 **Lunor**.
 ## 1. Setup ReplicatedStorage
 Navigate to ReplicatedStorage and create these three objects. This acts as the "bridge" between your players and the server.
 
